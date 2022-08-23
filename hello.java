@@ -38,3 +38,32 @@ void display() {
 	}
 	
 }
+
+package com.org.phase1;
+public class Employee implements Comparable<Employee> {
+	// Declaration of encapsulated variables.
+	  private String name;
+	  private double salary;
+	 
+	public Employee(String name, double salary){
+	  this.name = name;
+	  this.salary = salary;
+	  }
+	public String getName() {
+	   return name;
+	 }
+	public double getSalary() {
+	   return salary;
+	 }
+	public void hikeSalary(double byPercent){
+	  double hike = salary * byPercent / 100;
+	   salary += hike;
+	 }
+	@Override
+	public int compareTo(Employee emp)
+	{
+	 if (salary < emp.salary) return -1;
+	 if (salary > emp.salary) return 1;
+	   return 0;
+	  }
+}
