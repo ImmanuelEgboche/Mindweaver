@@ -33,3 +33,35 @@ public static void main(String args[]) {
 	
 }
 }
+
+import java.util.ArrayList;
+import java.util.Collections;
+public class ComparatorDemo {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StudentData s1 = new StudentData(1, "Amit", 22, 78000);
+		StudentData s2 = new StudentData(2, "Bhvesh", 23, 56000);
+		StudentData s3 = new StudentData(6, "Bobby", 21, 830000);
+		StudentData s4 = new StudentData(10, "Naomi", 21, 640000);
+		
+ArrayList< StudentData> a = new ArrayList<>();
+a.add(s1);a.add(s2);a.add(s3);a.add(s4);
+System.out.println("Sort by name ...");
+Collections.sort(a,new NameComparator());
+for(StudentData s : a) {
+	System.out.println(s.name+"   "+s.rollno+"   "+s.age+"   "+s.fee);
+}
+System.out.println("====================================");
+System.out.println("Sort by age...");
+Collections.sort(a,new AgeComparator());
+for(StudentData s : a) {
+	System.out.println(s.name+"   "+s.rollno+"   "+s.age+"   "+s.fee);
+}
+System.out.println("===================================================");
+System.out.println("Sort by Fee");
+Collections.sort(a,new MarksComparator());
+for(StudentData s : a) {
+	System.out.println(s.name+"  ||  "+s.rollno+" ||   "+s.age+"  ||  "+s.fee);
+}
+	}
+}
