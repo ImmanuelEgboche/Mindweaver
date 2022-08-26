@@ -29,3 +29,16 @@
 		  System.out.println(" Replace hello to Hi : "+s1.replace(8, 10, "in"));
 	
 
+ System.out.println("I print number between 1 and 10");
+        int n = sc.nextInt();
+        int nums[] = new int[n];
+        System.out.println(" Enter " + n + " different numbers");
+        int total =0;
+        for(int i=0 ;i<n ;i++) {
+            nums[i]=sc.nextInt();
+            total+=nums[i];
+        }
+        float average = total/n;
+        System.out.println(" Total: "+total);
+        System.out.println(" Average: " + average);
+
