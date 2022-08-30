@@ -53,3 +53,18 @@ public class NewThread extends Thread {
 		t.setName("NewThread");
 	}
 }
+
+package com.org.threadD;
+public class ThreadDemo implements Runnable {
+	public static void main(String args[]) {
+		System.out.println("Main Thread running ");
+	ThreadDemo t = new ThreadDemo();
+	Thread t1 = new Thread(t);
+	t1.start();
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		System.out.println(" Hello ...new thread is running  ");	
+	}
+}
