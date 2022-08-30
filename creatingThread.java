@@ -18,3 +18,38 @@ public class MyThread extends Thread {
 		t.start();//this thread will execute statements inside run() method of MyThread object 
 	}
 }
+
+package com.org.threadD;
+public class NewThread extends Thread {
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		Thread t = Thread.currentThread();
+		System.out.println(t);
+		System.out.println("New thread starts running ");
+		System.out.println("I am in run() method");
+	}
+	public static void main(String args[]) {
+		System.out.println("main Thread starts running");
+		Thread t1 =  Thread.currentThread();
+		System.out.println(t1);
+		int ac1 = Thread.activeCount();
+		System.out.println(" Active count -> "+ac1);
+		
+		//create an object of NewThread class 
+		NewThread nt = new NewThread();
+		int ac2 = Thread.activeCount();
+		System.out.println(ac2);
+		
+		//create an object of Thread class and pass the object ref variable nt
+		Thread t = new Thread(nt);
+		int ac3 = Thread.activeCount();
+		System.out.println(ac3);
+		
+		t.start();
+		int ac4 = Thread.activeCount();
+		System.out.println(ac4);
+		t.setName("NewThread");
+	}
+}
