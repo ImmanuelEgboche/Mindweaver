@@ -1,30 +1,50 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 
 public class main {
     
-    
+    static final Map<String, String> fileNames;
+
+    static{
+        fileNames = new LinkedHashMap<>();
+        fileNames.put("example","example.txt");
+        fileNames.put("test","test.txt");
+
+    }
+
     // String num2 = '2';
     // String num3 = '3';
     // String num4 = '4';
     
-    static void addArray(String name){
-        ArrayList<String> items = new ArrayList<String>();
-        items.add(name);
-        System.out.println(items);
+    public static void addHm(String input, String string){
+        fileNames.put(input, string);
+        System.out.println(fileNames);
         
     }
 
-    static void createFile(){
+    public static void find(String input){
+        fileNames.get(input);
+    }
+
+    public static void delete(String input){
+        fileNames.remove(input);
+    }
+
+    public static void createFile(){
         try{
             Scanner obj = new Scanner(System.in); // creates scanner object 
             System.out.println("Enter FILE NAME");
             String input = obj.nextLine();
-            String string = String.format(" %s.txt", input);
-            addArray(string);
+            String string = String.format(" %s.txt", input); // mainly take two different arguments one with txt and one without 
+            addHm(input, string);
             System.out.println(string);
+            System.out.println(fileNames);
+
             File fobj = new File(string);
             if(fobj.createNewFile()){
             System.out.println("file created " + fobj.getName());
@@ -38,15 +58,17 @@ public class main {
 
     }
     static void deleteFile(){
-            File obj = new File("newfile.txt");
-            if(obj.delete()){
-                System.out.println("file deleted");
-            } else {
-                System.out.println("fjust leave it");
-            }
+            File obj = new File("/home/manueegbochemin/Documents/project1/example.txt");
+            System.out.println(obj.delete());
+            //     System.out.println("file deleted");
+            // } else {
+            //     System.out.println("fjust leave it");
+            // }
     }
     public static void main(String[] args){
         // String s = String.valueOf(num1);
+        //  HashMap<String, String> fileNames = new HashMap<String, String>();
+        
         Scanner obj = new Scanner(System.in); // creates scanner object 
         System.out.println("Welcome \n 1 to create or add \n 2 for deleting \n 3 to find a file \n 0 to exit");
         String input = obj.nextLine();
@@ -93,7 +115,12 @@ public class main {
                 break;
             }
             if(input.equals("3")){
+                System.out.println(fileNames);
+
                 System.out.println("What file are you looking for?");
+                Scanner menu1 = new Scanner(System.in);
+                String name = menu1.nextLine();
+                
                 /* 
                     Need a sorting algorthim then a searching algorthim 
 
@@ -127,3 +154,4 @@ public class main {
         
     }
 }
+
