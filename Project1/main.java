@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+"FIX WHILE LOOP
+
+"
 
 public class main {
     
@@ -57,6 +60,7 @@ public class main {
         }
 
     }
+    // check file path method 
     static void deleteFile(){
             File obj = new File("/home/manueegbochemin/Documents/project1/example.txt");
             System.out.println(obj.delete());
@@ -90,6 +94,7 @@ public class main {
                 if(men.equals("create")){
                     createFile();
                 }
+                // finish  add file method
                 if (men.equals("add")){
                     /*addFile(); 
                     needs to be implemented*/
