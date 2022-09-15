@@ -3,19 +3,21 @@ As directed by Company Lockers Pvt. Ltd. I have created a prototype which  Youâ€
 ## Installation & usage
 ### Installation
 - Clone or download the repo.
-- Cd into client folder.
-- In your command line, run `npm install`.
+- Cd into project1 folder.
+- In your command line, run `javac project1.java`.
+- Then run `java project1`
 ### Usage
-- In your command line, run `npm run dev` to run the app.
-- Select the number of questions, difficulty level, type and your chosen category. Press **Get Started** to begin playing.
-- To answer questions, click your answer. In the score page the user should insert his name to save it in the db.
+- Follow the instructions on the command line 
+- 1 for creation, 2 for deletion, 3 for seacrhing and 0 to exit the application
 ## Technologies
-- React
-- Redux
-- Webpack
-- JavaScript
-- HTML, CSS
+- Java
+- HashMaps for storing refernces to files
+- File
+- Path to
 ## Process
+
+image.pngimage.png
+![](image.png)
 - Started by wireframing the pages in Figma
 - Wrote pseudo code to break down the logic of collecting user input, collecting information from the API, linking the two and assigning functionality to buttons.
 - Used Webpack to configure our server and development setup.
@@ -26,7 +28,7 @@ As directed by Company Lockers Pvt. Ltd. I have created a prototype which  Youâ€
 - Predicting length of time certain tasks will take
 - Implementing Redux
 - Testing
-
+image.png
 ## Future features
 - Remote multiplayer functionality using [Socket](https://socket.io)
 - Ability to choose number of players 
