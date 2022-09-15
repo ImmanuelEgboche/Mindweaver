@@ -1,6 +1,6 @@
 # File Creation Assessment
 ### Task
-As directed by Company Lockers Pvt. Ltd. I have created a prototype which  Youâ€™re asked to develop a prototype of the application. The prototype of the application will be then presented to the relevant stakeholders for the budget approval.
+As directed by Company Lockers Pvt. Ltd. I have created a prototype which  allows users to add, create, search and delete files of their choosing. This CLI application allows users to keep track of files they already have made whilst allowing them to create more. 
 
 ## Installation & usage
 ### Installation
@@ -16,8 +16,7 @@ As directed by Company Lockers Pvt. Ltd. I have created a prototype which  Youâ€
 ## Technologies
 - Java
 - HashMaps for storing refernces to files
-- File
-- Path to
+- File package for accessing file paths
 
 ## Process
 
