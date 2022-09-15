@@ -16,8 +16,7 @@ As directed by Company Lockers Pvt. Ltd. I have created a prototype which  Youâ€
 - Path to
 ## Process
 
-image.pngimage.png
-![](image.png)
+![](process.png)
 - Started by wireframing the pages in Figma
 - Wrote pseudo code to break down the logic of collecting user input, collecting information from the API, linking the two and assigning functionality to buttons.
 - Used Webpack to configure our server and development setup.
